@@ -6,6 +6,8 @@
 @import 'global';
 
 
+
+// header
 .header {
     &__inner {
         display: flex;
@@ -124,125 +126,15 @@
         }
     }
 }
-
-
-.footer-top {
-    padding: 90px 0 70px;
-    &__items {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__logo {
-        margin-bottom: 20px;
-    }
-
-    &__contact {
-        max-width: 200px;
-    }
-
-    &__services,
-    &__account {
-        max-width: 120px;
-    }
-
-    &__inner {
-        color: $often;
-    }
-
-    &__address {
-        display: block;
-        font-size: 14px;
-        line-height: 18px;
-        margin-bottom: 10px;
-    }
-
-    &__phone, &__email {
-        font-size: 14px;
-        line-height: 32px
-    }
-
-    &__list {
-        @extend %rubik-regular-400;
-        font-size: 14px;
-        line-height: 24px;
-        color: $often;
-    }
-
-    &__title {
-        @extend %dmsans-bold-700;
-        text-transform: uppercase;
-        font-size: 16px;
-        margin: 20px 0;
-        color: #1f2044;
-    }
-
-    &__newsletter-text {
-        max-width: 280px;
-        margin-bottom: 20px;
-        @extend %rubik-regular-400;
-        font-size: 14px;
-        line-height: 24px;
-        color: $often;
-    }
-}
-
-.form {
-    &__input {
-        padding: 15px;
-        border: none;
-        background-color: rgba(252, 215, 182, 0.404);
-        &::placeholder {
-            @extend %rubik-regular-400;
-            color: #234969;
-        }
-    }
-    .form__btn {
-        border: none;
-        padding: 15px;
-        cursor: pointer;
-        background-color: #234969;
-        color: #fff;
-    }
-}
-
-
-.footer__line {
-    margin: 0;
-    border-bottom: none;
-}
-
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0 35px;
-    &__copy {
-        color: $often;
-        font-size: 14px;
-        line-height: 32px;
-    }
-    &__list {
-        display: flex;
-    }
-    &__item {
-        padding-right: 10px;
-        &:last-child {
-            padding-right: 0;
-        }
-    }
-    &__item + &__item {
-        padding-left: 10px;
-        border-left: 2px solid $often;
-    }
-    &__link {
-        color: $often;
-    }
-}
+///////////////////////////////////////
 
 
 
+
+
+
+
+// top-slider
 .top-slider {
     background-color: #fcd7b6;
     padding-top: 100px;
@@ -334,6 +226,140 @@
 .slick-dots .slick-active button{
     background-color: #fff;
 }
+///////////////////////////////
+
+
+
+
+
+
+
+// footer
+.footer-top {
+    padding: 90px 0 70px;
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        margin-bottom: 20px;
+    }
+
+    &__contact {
+        max-width: 200px;
+    }
+
+    &__services,
+    &__account {
+        max-width: 120px;
+    }
+
+    &__inner {
+        color: $often;
+    }
+
+    &__address {
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    &__phone, &__email {
+        font-size: 14px;
+        line-height: 32px
+    }
+
+    &__list {
+        @extend %rubik-regular-400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $often;
+    }
+
+    &__title {
+        @extend %dmsans-bold-700;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin: 20px 0;
+        color: #1f2044;
+    }
+
+    &__newsletter-text {
+        max-width: 280px;
+        margin-bottom: 20px;
+        @extend %rubik-regular-400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $often;
+    }
+}
+
+.form {
+    &__input {
+        padding: 15px;
+        border: none;
+        background-color: rgba(252, 215, 182, 0.404);
+        &::placeholder {
+            @extend %rubik-regular-400;
+            color: #234969;
+        }
+    }
+    .form__btn {
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        background-color: #234969;
+        color: #fff;
+        transition: all .3s;
+        &:hover {
+            background-color: #234a69ca;
+        }
+    }
+}
+
+
+.footer__line {
+    margin: 0;
+    border-bottom: none;
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 35px;
+    &__copy {
+        color: $often;
+        font-size: 14px;
+        line-height: 32px;
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        padding-right: 10px;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    &__item + &__item {
+        padding-left: 10px;
+        border-left: 2px solid $often;
+    }
+    &__link {
+        color: $often;
+    }
+}
+////////////////////// footer
+
+
+
+
 
 
 @import 'media';
+
+
