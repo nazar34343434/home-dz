@@ -11,3 +11,18 @@
         transform: translateY(0);
     }
 }
+
+
+@keyframes anim-arrow {
+    30% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -1,7 +1,8 @@
+@import 'reset';
 @import 'vars';
 @import 'fonts';
 @import 'animation';
-@import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -84,7 +85,7 @@
     &__cart {
         position: relative;
         padding: 10px;
-        &:hover .nav-user__num {
+        &:hover .nav-user__num{
             background: #000;
             color: #fff;
         }
@@ -133,7 +134,7 @@
     }
 
     &__logo {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     &__contact {
@@ -146,12 +147,13 @@
     }
 
     &__inner {
-        color: $link;
+        color: $often;
     }
 
     &__address {
         display: block;
         font-size: 14px;
+        line-height: 18px;
         margin-bottom: 10px;
     }
 
@@ -164,7 +166,7 @@
         @extend %rubik-regular-400;
         font-size: 14px;
         line-height: 24px;
-        color: $link;
+        color: $often;
     }
 
     &__title {
@@ -181,7 +183,7 @@
         @extend %rubik-regular-400;
         font-size: 14px;
         line-height: 24px;
-        color: $link;
+        color: $often;
     }
 }
 
@@ -217,7 +219,7 @@
     align-items: center;
     padding: 30px 0 35px;
     &__copy {
-        color: $link;
+        color: $often;
         font-size: 14px;
         line-height: 32px;
     }
@@ -232,18 +234,106 @@
     }
     &__item + &__item {
         padding-left: 10px;
-        border-left: 2px solid $link;
+        border-left: 2px solid $often;
     }
     &__link {
-        color: $link;
+        color: $often;
     }
 }
 
 
 
+.top-slider {
+    background-color: #fcd7b6;
+    padding-top: 100px;
+    &__container {
+        max-width: 1460px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content {
+        padding-top: 120px;
+        padding-left: 140px;
+    }
+    &__title {
+        font-size: 72px;
+        line-height: 70px;
+        color: $default;
+    }
+    &__descr {
+        max-width: 380px;
+        margin: 40px 0;
+        font-size: 18px;
+        line-height: 30px;
+        color: #436372;
+    }
+    &__btn {
+        padding: 20px 100px 20px 20px;
+        background-color: #a3bbc8;
+        font-size: 15px;
+        line-height: 12px;
+        color: #fff;
+        position: relative;
+        transition: all .3s;
+        &:hover {
+            background-color: #2e9cd8;
+        }
+        &:hover::after {
+            animation: anim-arrow 1s infinite;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: calc(50% - 4px);
+            right: 18px;
+            width: 22px;
+            height: 8px;
+            background: url('../images/btn-arrow.png') center center / cover no-repeat;
+        }
+    }
+}
 
 
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50px);
+    counter-reset: counter;
+}
 
+.slick-dots li{
+    font-size: 0;
+    position: relative;
+    &::before {
+        content: counter(counter);
+        counter-increment: counter(counter);
+    }
+}
+
+.slick-dots li + li {
+    margin-left: 15px;
+    display: block;
+}
+
+.slick-dots li button {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.330);
+    &:focus {
+        outline-color: transparent;
+    }
+}
+
+.slick-dots .slick-active button{
+    background-color: #fff;
+}
 
 
 @import 'media';
