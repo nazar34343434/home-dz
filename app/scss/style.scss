@@ -58,21 +58,82 @@
 
 .nav-user {
     display: flex;
-    &__search {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: #edf1f4;
-        &:hover .nav-user__search-icon{
-            transform: rotate(360deg);
+    .search {
+        position: relative;
+        transition: all .3s;
+        &__input {
+            position: absolute;
+            height: 50px;
+            width: 300px;
+            left: -300px;
+            border: none;
+            background-color: #fcd7b6;
+            font-size: 18px;
+            border-radius: 50px;
+            padding: 0 40px 0 20px;
+            outline: none;
+            transform: scale(0);
+            transform-origin: right;
+            transition: all .3s;
+            text-transform: capitalize;
+        }
+    
+        &__input.active {
+            height: 50px;
+            width: 300px;
+            left: -300px;
+            transform-origin: right;
+            transform: scale(1);
+        }
+    
+        &__btn {
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            width: 50px;
+            height: 50px;
+            z-index: 5;
+            border-radius: 50%;
+            background-color: #ccc;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all .3s;
+        }
+    
+        &__btn.active {
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ccc;
+            transform: translateY(-50%) rotate(360deg);
+        }
+    
+    
+        &__cancel {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 25px;
+            cursor: pointer;
+            transition:  all .3s;
+        }
+    
+        &__cancel.active {
+            font-size: 30px;
+            top: 0;
+            right: -15px;
+            transform: translateY(-50%) rotate(360deg);
+            color: #fcd7b6;;
         }
     }
-    &__search-icon {
-        transition: all .3s;
-    }
+    
     &__box {
         display: flex;
         justify-content: center;
@@ -293,15 +354,15 @@
 
     &__title {
         margin-bottom: 25px;
-        @extend %dmsans-700;
         font-size: 26px;
         color: $default;
+        @extend %dmsans-700;
     }
     &__descr {
         max-width: 340px;
         margin-bottom: 20px;
-        @extend %rubik-400;
         color: $default;
+        @extend %rubik-400;
     }
     &__link {
         padding: 15px 65px 15px 10px;
@@ -385,27 +446,27 @@
     }
 
     &__list {
-        @extend %rubik-400;
         font-size: 14px;
         line-height: 24px;
         color: $often;
+        @extend %rubik-400;
     }
 
     &__title {
-        @extend %dmsans-700;
         text-transform: uppercase;
         font-size: 16px;
         margin: 20px 0;
         color: #1f2044;
+        @extend %dmsans-700;
     }
 
     &__newsletter-text {
         max-width: 280px;
         margin-bottom: 20px;
-        @extend %rubik-400;
         font-size: 14px;
         line-height: 24px;
         color: $often;
+        @extend %rubik-400;
     }
 }
 
@@ -467,7 +528,6 @@
     }
 }
 ////////////////////// footer
-
 
 
 

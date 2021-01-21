@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,10 +39,15 @@
                     </ul>
                 </nav>
     
+
                 <div class="nav-user">
-                    <a class="nav-user__search" href="#">
-                        <img class="nav-user__search-icon" src="images/icons/search.svg" alt="icon search">
-                    </a>
+                    <div class="search">
+                        <input class="search__input" type="text" placeholder="Введите для поиска ...">
+                        <div class="search__btn">
+                            <img class="search__icon" src="images/icons/search.svg" alt="search icon">
+                        </div>
+                        <div class="search__cancel">&times;</div>
+                    </div>
     
                     <div class="nav-user__box">
                         <a class="nav-user__heart" href="#">
@@ -184,6 +189,22 @@
                 <img class="video__img" src="images/video/video-btn.svg" alt="video img button">
             </a>
         </div>
+
+
+<!-- 
+        <div class="box">
+            <div class="search-box">
+                <input type="text" placeholder="Введите для поиска ...">
+
+                <div class="search-btn">
+                    <img src="images/icons/search.svg" alt="">
+                </div>
+
+                <div class="cancel-btn">&times;</div>
+            </div>
+        </div> -->
+
+
 
     </main>
     <footer class="footer">
