@@ -26,3 +26,10 @@
         transform: translateX(0);
     }
 }
+
+
+@keyframes anim-news {
+    100% {
+        left: 150%;
+    }
+}
